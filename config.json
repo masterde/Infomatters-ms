@@ -1,0 +1,54 @@
+{
+  "site": {
+    "name": "Infomatters",
+    "desc": "Information Matters B.V.",
+    "author": "Baker Shamlan",
+    "contact": "root@baker.io",
+    "social": {
+      "twitter": "http://twitter.com/masterde",
+      "github": "http://github.com/masterde",
+      "linkedin": "http://linkedin.com/in/masterde"
+    }
+  },
+  "dir": {
+    "lib": "./lib/",
+    "source": "./data/",
+    "destination": "./public/"
+  },
+  "template": {
+    "engine": "handlebars",
+    "theme": "hyperspace/",
+    "directory": "templates/",
+    "assets":  "assets/",
+    "layouts":  "layouts/",
+    "partials": "partials/",
+    "default": "generic.html"
+  },
+  "collections": {
+    "page": {
+      "pattern": "**/index.*",
+      "sortBy": "priority",
+      "reverse": true,
+      "refer": false
+    },
+    "start": {
+      "pattern": "start/**/*",
+      "sortBy": "priority",
+      "reverse": true,
+      "refer": true,
+      "metadata": {
+        "layout": "index.html"
+      }
+    },
+    "project": {
+      "pattern": "project/**/*",
+      "sortBy": "date",
+      "reverse": true,
+      "refer": true,
+      "limit": 50,
+      "metadata": {
+        "layout": "generic.html"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{{> meta}}
+	</head>
+	<body>
+
+		{{> header}}
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">{{title}}</h1>
+							{{#if isPage}}
+							{{else}}
+							<ul class="menu"><li>Published {{ dateFormat }}</li><li>{{ wordCount }} words</li><li>{{ readingTime }}-minute read</li></ul>
+							{{/if}}
+							<p>{{{content}}}</p>
+							{{#if isPage}}
+								{{> navsub }}
+							{{else}}
+							<!-- article navigation-->
+							<nav class="nav page">
+								<ul>
+								{{#if previous.title }}
+									<li><a href="{{ root }}{{ previous.path }}/" class="back">&laquo; back: {{ previous.title }}</a></li></p>
+								{{/if}}
+								{{#if next.title }}
+									<li><a href="{{ root }}{{ next.path }}/" class="next">next: {{ next.title }} &raquo;</a></li></p>
+								{{/if}}
+								</ul>
+							</nav>
+							{{/if}}
+						</div>
+					</section>
+
+			</div>
+
+		{{> footer}}
+
+		{{> scripts}}
+
+	</body>
+</html>

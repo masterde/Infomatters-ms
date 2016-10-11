@@ -1,0 +1,27 @@
+<h3>{{tableTitle}}</h3>
+<div class="table-wrapper">
+  <table class="alt">
+    <thead>
+      <tr>
+        {{#each columns}}
+        <th>{{column}}</th>
+        {{/each}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{number}}</td>
+        <td>{{name}}</td>
+        <td>{{date}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"></td>
+        <td>{{total}}</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
